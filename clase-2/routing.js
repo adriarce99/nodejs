@@ -1,5 +1,4 @@
 const http = require('node:http')
-const fs = require('node:fs')
 
 const dittoJSON = require('./pokemon/ditto.json')
 
@@ -29,6 +28,7 @@ const processRequest = (req, res) => {
           })
           req.on('end', () => {
             const data = JSON.parse(body)
+            data.timestamp = Date.now()
             // Aqui podria llamar a una base de datos
             // Otra forma de escribir el header
             res.writeHead(201, { 'Content-Type': 'aplication/json; charset=utf-8' })

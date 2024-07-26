@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "http.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:1": "node --watch ./clase-2/express.js",
+    "dev:2": "node --watch ./clase-2/express2.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,8 @@
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "dependencies": {
+    "express": "4.19.2"
   }
 }
