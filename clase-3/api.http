@@ -1,0 +1,39 @@
+###Recuperar peliculas
+GET http://localhost:1234/movies
+
+###Recuperar pelicula por id
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+###Recuperar pelicula por genero
+GET http://localhost:1234/movies?genre=Action
+
+###Crear una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+  "genre": ["Crime", "Drama"]
+}
+
+###Crear una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "1",
+  "year": "pato"
+}
+
+
+###Actualizar una peli
+PATCH http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "year": 1993
+}
